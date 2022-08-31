@@ -1,5 +1,7 @@
 Identifiers:
   func
+  class
+  allocate
   
 Block 1:
   if
