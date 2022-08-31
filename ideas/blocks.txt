@@ -1,0 +1,19 @@
+Identifiers:
+  func
+  
+Block 1:
+  if
+  else
+  switch
+  
+Block 2:
+  include
+  thread
+
+Block 3:
+  int
+  char
+  arg
+  double
+  tuple
+  float
