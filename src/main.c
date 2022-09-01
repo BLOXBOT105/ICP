@@ -45,6 +45,8 @@ int main(int argc, char *argv[]) {
                 printf("Something went wrong when parsing the buildfile");
                 exit(1);
             }
+            
+            free(&fp)
         }
         else {
             printf("oh no the file doesn't exist!!");
