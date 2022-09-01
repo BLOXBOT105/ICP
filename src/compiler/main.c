@@ -2,7 +2,8 @@
 
 int system(const char *command);
 
-int main(void) {
+// sam I already made the main function in main.c!! don't remake it pls
+int main_s(void) {
     system("echo Hello, World!");
     return 1;
 }
