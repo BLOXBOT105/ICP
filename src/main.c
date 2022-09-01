@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
 
-#define MAX_LINE_LENGTH 260
+#define MAX_LINE_LENGTH 1500
 
 int main(int argc, char *argv[]) {
 
