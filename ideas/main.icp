@@ -12,5 +12,5 @@ int main() {
 }
 
 string GetWindowName() {
-    return "Test ICP File";
+    ret "Test ICP File";
 }
