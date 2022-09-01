@@ -56,9 +56,12 @@ int main(int argc, char *argv[]) {
     char *files;
     char **files_arr;
 
-    if(argc == 2) {
-        char *build_file_path = argv[1];
-        // if build file exists
+    if(argc == 3) {
+        char *build_file_path = argv[2];
+        char *build_arg = argv[1];
+
+        if(build_arg == "-bf") {
+                    // if build file exists
         if (access(build_file_path, 0) == 0) {
             char line[MAX_LINE_LENGTH] = {0};
             FILE *fp;
@@ -98,6 +101,12 @@ int main(int argc, char *argv[]) {
         }
         else {
             printf("oh no the file doesn't exist!!");
+        }
+        } else if(build_arg == "-s") {
+            // code for building singular file
+        } else {
+            printf("Invalid Build Argument!");
+            exit(1);
         }
     } else {
         printf("Invalid Argument Count");
