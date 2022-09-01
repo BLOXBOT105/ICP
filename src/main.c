@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <assert.h>
+#include "lexer/lexer.h"
 
 #define MAX_LINE_LENGTH 3000
 
@@ -97,6 +98,15 @@ int main(int argc, char *argv[]) {
             }
 
             files_arr = str_split(files, ',');
+            char* curfile = "default";
+            int curindex = 0;
+
+            while(curfile != "+") {
+                curfile = files_arr[curindex];
+                LexContents("a");
+            }
+
+            printf("completed the build process");
             free(&fp);
         }
         else {
