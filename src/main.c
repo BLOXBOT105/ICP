@@ -93,7 +93,7 @@ int main(int argc, char *argv[]) {
             }
 
             if(src_folder == NULL || output_file == NULL || files == NULL) {
-                printf("Something went wrong when parsing the buildfile");
+                printf("Something went wrong when parsing the ICP build file. Check logs for more info");
                 exit(1);
             }
 
