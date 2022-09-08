@@ -1,12 +1,13 @@
-;include "iUi"
-;include "stdlib"
+#include "iUi"
+#include "stdlib"
+#include "string"
 
 -> Defines the main function AKA the entry point
 int main() {
     int winLength = 1920;
     int winHeight = 1080;
 
-    --> Create Window Method is Imported from the 'iUi' Library. We then pass it the the 2 variables we made above and a method return value which will then create a window for us <--
+    -> Create Window Method is Imported from the 'iUi' Library. We then pass it the the 2 variables we made above and a method return value which will then create a window for us <--
 
     CreateWindow(GetWindowName(), winLength, winHeight);
 }
