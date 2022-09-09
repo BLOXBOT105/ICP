@@ -1,14 +1,18 @@
-main: ;; function main with 0 args
-   PUSH %BP
-   MOV  %SP, %BP
+section .text
+   global _entry
+
+_entry:
+   jmp @main
    
-@main_body: ;; contents of main
-   SUB  %SP, $4, %SP
-   MOV  $1, -4(%BP) ;; $return value
-   MOV  -4(%BP), %13
-   JMP  @main_exit ;; return called
+@main: ;;function perameters/arguments
+   void db "VOID",0xa
+   jmp @main_body
+
+@main_body: ;; function contents
+   mov eax, 4
+   jmp @main_return
    
-@main_exit: ;; return
-   MOV  %BP, %SP
-   POP  %BP
-   RET 
+@main_return: ;; return value from function
+   mov eax, 1
+   mov ebx, 3
+   int 0x80
