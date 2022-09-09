@@ -1,7 +1,7 @@
 section .text
    global _entry
 
-_entry:
+_entry: ;; defines entry function
    jmp @main
    
 @main: ;;function perameters/arguments
