@@ -3,6 +3,7 @@
 #include <string.h>
 #include <assert.h>
 #include "lexer/lexer.h"
+#include "Utils/Logging.h"
 
 #define MAX_LINE_LENGTH 3000
 
@@ -48,6 +49,19 @@ char** str_split(char* a_str, const char a_delim)
     }
 
     return result;
+}
+
+// a function to do all things that must run
+// when the program first starts
+void Startup() {
+    if(CheckLogExistence() == 1) {
+        printf("[Logger] - Log Exists");
+        u__clean_log__();
+    } else {
+        printf("log file don't exist")
+    }
+
+    WriteToLog("Startup Complete. Log Test!");
 }
 
 int main(int argc, char *argv[]) {
