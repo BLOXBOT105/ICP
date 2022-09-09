@@ -4,7 +4,7 @@ section .text
 _entry: ;; defines entry function
    jmp @main
    
-@main: ;;function perameters/arguments
+@main: ;; function perameters/arguments
    void db "VOID",0xa
    jmp @main_body
 
